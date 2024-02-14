@@ -43,8 +43,8 @@ const smallSliderElement = document.getElementById("small-slider")
 for (let i = 0; i < images.length; i++) {
 
     // creo un nuovo elemento per l'inserimento delle immagini
-    let newElement = document.createElement("img");
-    newElement.classList.add("thumbnail")
+    newElement = document.createElement("img");
+    newElement.classList.add("img-thumbnail")
     newElement.src =  images[i].image;
     // let imageElement =
     // console.log(imageElement)
@@ -54,12 +54,12 @@ for (let i = 0; i < images.length; i++) {
     console.log(textElement)
 
     // aggiungo il nuovo elemento creato al nuovo contenitore per le img 
-    // smallSliderElement.append(newElement)
+    smallSliderElement.append(newElement)
     
 }
 console.log(images)
 
-document.querySelector("#slider img:nth-of-type(1)").className = "active";
+// document.querySelector("#slider img:nth-of-type(1)").className = "active";
 
 /*
 -  salvo un contatore della slide
@@ -74,65 +74,67 @@ document.querySelector("#slider img:nth-of-type(1)").className = "active";
 let slideNumber = 1;
 
 // -  QUANDO premo la freccia SU
-document.querySelector("#up-arrow").addEventListener("click", function() {
+newElement.addEventListener("click", function() {
+
+    
 
 
-    if (slideNumber < images.length) {
+//     if (slideNumber < images.length) {
 
-        // - prendo l'immagine attuale e le rimuovo la classe "active"  
-        document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.remove("active");
+//         // - prendo l'immagine attuale e le rimuovo la classe "active"  
+//         document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.remove("active");
 
-        // - aumento il contatore di 1
-        slideNumber++;
+//         // - aumento il contatore di 1
+//         slideNumber++;
 
-        // - prendo l'immagine con il nuovo contatore e le aggiungo la classe "active"
-        document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.add("active");
+//         // - prendo l'immagine con il nuovo contatore e le aggiungo la classe "active"
+//         document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.add("active");
 
-        console.log(slideNumber);
+//         console.log(slideNumber);
 
-    } else {
+//     } else {
 
-        // - prendo l'immagine attuale e le rimuovo la classe "active"  
-        document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.remove("active");
+//         // - prendo l'immagine attuale e le rimuovo la classe "active"  
+//         document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.remove("active");
 
-        // resetto la variabile che mi conta l'immagine a cui sono arrivato
-        slideNumber = 1;
+//         // resetto la variabile che mi conta l'immagine a cui sono arrivato
+//         slideNumber = 1;
 
-        // - prendo l'immagine con il nuovo contatore e le aggiungo la classe "active"
-        document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.add("active");
+//         // - prendo l'immagine con il nuovo contatore e le aggiungo la classe "active"
+//         document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.add("active");
 
-    }
+//     }
 
         
-});
+// });
 
 
-document.querySelector("#down-arrow").addEventListener("click", function() {
+// document.querySelector("#down-arrow").addEventListener("click", function() {
 
-    if (slideNumber > 1) {
-        // - prendo l'immagine attuale e le rimuovo la classe "active"  
-        document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.remove("active");
+//     if (slideNumber > 1) {
+//         // - prendo l'immagine attuale e le rimuovo la classe "active"  
+//         document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.remove("active");
 
-        // - diminuisco il contatore di 1
-        slideNumber--;
+//         // - diminuisco il contatore di 1
+//         slideNumber--;
 
-        // - prendo l'immagine con il nuovo contatore e le aggiungo la classe "active"
-        document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.add("active");
+//         // - prendo l'immagine con il nuovo contatore e le aggiungo la classe "active"
+//         document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.add("active");
 
-        console.log(slideNumber);
+//         console.log(slideNumber);
 
-    } else {
+//     } else {
 
-        // - prendo l'immagine attuale e le rimuovo la classe "active"  
-        document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.remove("active");
+//         // - prendo l'immagine attuale e le rimuovo la classe "active"  
+//         document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.remove("active");
 
-        // - metto il valore di slideNumebr = alla posizione dell'ultima immagine
-        slideNumber = images.length;
+//         // - metto il valore di slideNumebr = alla posizione dell'ultima immagine
+//         slideNumber = images.length;
 
-        // - prendo l'immagine con il nuovo contatore e le aggiungo la classe "active"
-        document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.add("active");
+//         // - prendo l'immagine con il nuovo contatore e le aggiungo la classe "active"
+//         document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.add("active");
 
-    }
+//     }
     
 
 
