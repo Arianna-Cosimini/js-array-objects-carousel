@@ -55,8 +55,7 @@ for (let i = 0; i < images.length; i++) {
 
     // aggiungo il nuovo elemento creato al nuovo contenitore per le img 
     smallSliderElement.append(newElement)
-    // per ognuno di essi andremo a creare un elemento img dentro lo slider
-
+    
 }
 console.log(images)
 
