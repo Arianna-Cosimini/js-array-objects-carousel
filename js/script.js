@@ -54,7 +54,7 @@ for (let i = 0; i < images.length; i++) {
     console.log(textElement)
 
     // aggiungo il nuovo elemento creato al nuovo contenitore per le img 
-    smallSliderElement.append(newElement)
+    // smallSliderElement.append(newElement)
     
 }
 console.log(images)
