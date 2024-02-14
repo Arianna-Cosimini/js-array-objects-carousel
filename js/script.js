@@ -37,20 +37,24 @@ console.log(images);
 
 // bersagliamo lo slider
 const sliderElement = document.getElementById("slider");
-
+const smallSliderElement = document.getElementById("small-slider")
 
 // tramite un ciclo for prendiamo ogni indirizzo dall'array
 for (let i = 0; i < images.length; i++) {
 
-    let imageElement = images[i].image;
-    console.log(imageElement)
+    // creo un nuovo elemento per l'inserimento delle immagini
+    let newElement = document.createElement("img");
+    newElement.classList.add("thumbnail")
+    newElement.src =  images[i].image;
+    // let imageElement =
+    // console.log(imageElement)
     let titleElement = images[i].title;
     console.log(titleElement)
     let textElement = images[i].text;
     console.log(textElement)
 
-    sliderElement.innerHTML += `<img class = "card-img w-100" src="../img/${imageElement}">`;
-
+    // aggiungo il nuovo elemento creato al nuovo contenitore per le img 
+    smallSliderElement.append(newElement)
     // per ognuno di essi andremo a creare un elemento img dentro lo slider
 
 }
